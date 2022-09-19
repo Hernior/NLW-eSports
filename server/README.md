@@ -1,5 +1,10 @@
 # Back-end
 
+- npm install
+- npx prisma generate
+- npm run dev
+- npx prisma studio
+
 ## Entidades
 
 ### Game

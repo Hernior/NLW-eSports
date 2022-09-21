@@ -1,3 +1,4 @@
+export const SERVER_URL = 'http://192.168.11.117:3333'
 export const GAMES = [
   {
     id: '1',

@@ -11,6 +11,8 @@ import { styles } from './styles';
 import { Background } from '../../components/Background';
 import { useNavigation } from '@react-navigation/native';
 
+import { SERVER_URL } from '../../utils/games';
+
 export function Home() {
   const [games, setGames] = useState<GameCardProps[]>([]);
   const navigation = useNavigation();
@@ -20,7 +22,7 @@ export function Home() {
   }
 
   useEffect(() => {
-    fetch('http://192.168.0.111:3333/games')
+    fetch(`${SERVER_URL}/games`)
       .then(response => response.json())
       .then(data => setGames(data))
   }, [])
